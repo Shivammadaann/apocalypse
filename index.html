@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apocalypse Music - Profile</title>
+
+    <!-- Artist structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "ProfilePage",
+                "@id": "https://apocalypses.online/#webpage",
+                "url": "https://apocalypses.online/",
+                "name": "Apocalypse Music - Profile",
+                "inLanguage": "en",
+                "mainEntity": {
+                    "@id": "https://apocalypses.online/#artist"
+                }
+            },
+            {
+                "@type": "MusicGroup",
+                "@id": "https://apocalypses.online/#artist",
+                "name": "Apocalypse Music",
+                "alternateName": "Apocalypse",
+                "url": "https://apocalypses.online/",
+                "description": "Artist, creator, and composer with a passion for music, photography, and runway presence.",
+                "image": "https://apocalypses.online/assets/profile.jpg",
+                "logo": "https://apocalypses.online/assets/logo.jpg",
+                "email": "official@apocalypses.online",
+                "telephone": "+13436007061",
+                "sameAs": [
+                    "https://open.spotify.com/artist/5TbYWQFR0CWW2xo5bPFjob",
+                    "https://www.instagram.com/apocalypses.online/",
+                    "https://www.facebook.com/apocalypsemusicofficial/",
+                    "https://www.youtube.com/@apocalypsemusic.official",
+                    "https://www.snapchat.com/add/apocalypse.musc"
+                ],
+                "member": {
+                    "@type": "Person",
+                    "@id": "https://apocalypses.online/#shivam-madaan",
+                    "name": "Shivam Madaan",
+                    "jobTitle": ["Artist", "Creator", "Composer"],
+                    "image": "https://apocalypses.online/assets/profile.jpg"
+                },
+                "mainEntityOfPage": {
+                    "@id": "https://apocalypses.online/#webpage"
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/brittany-signature" rel="stylesheet">
+    
+    <!-- Importing Tailwind CSS for rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom configurations to fine-tune typography, rounding, and animations -->
+    <style>
+        body {
+            font-family: 'Shantell Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #000000;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-family: 'Brittany Signature', 'Shantell Sans', cursive;
+            font-synthesis: none;
+        }
+
+        .squircle {
+            border-radius: 3rem;
+        }
+
+        /* Modern Keyframe Animations - Sped up for real-time feel */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(244, 247, 251, 0.05); }
+            50% { box-shadow: 0 0 30px rgba(244, 247, 251, 0.15); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+
+        /* Animation Classes */
+        .anim-fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+        
+        .scroll-hidden {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .scroll-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Staggered Delays - Reduced for snappier loading */
+        .delay-100 { animation-delay: 50ms; transition-delay: 50ms; }
+        .delay-200 { animation-delay: 100ms; transition-delay: 100ms; }
+        .delay-300 { animation-delay: 150ms; transition-delay: 150ms; }
+        .delay-400 { animation-delay: 200ms; transition-delay: 200ms; }
+        .delay-500 { animation-delay: 250ms; transition-delay: 250ms; }
+
+        /* Tilt Effect Reset */
+        .tilt-card {
+            transform-style: preserve-3d;
+            transition: transform 0.05s linear;
+        }
+        
+        .floating-element {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-4 md:p-8 relative">
+
+    <!-- Subtle animated background gradient element -->
+    <div class="absolute inset-0 z-[-1] opacity-30" style="background: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #000000 100%);"></div>
+
+    <!-- Site Header / Navigation -->
+    <header class="fixed top-0 left-0 w-full py-4 px-6 md:px-12 flex justify-between items-center z-[100] bg-black/70 backdrop-blur-md border-b border-white/10 anim-fade-in-up shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
+        
+        <!-- Left Spacer to maintain flex layout -->
+        <div class="hidden md:block w-1/4"></div>
+
+        <!-- Center Text Logo -->
+        <div class="absolute left-1/2 -translate-x-1/2 flex items-center cursor-pointer group">
+            <h2 class="text-3xl md:text-4xl font-bold text-white tracking-wide group-hover:scale-105 active:scale-95 transition-all duration-200 ease-out drop-shadow-[0_4px_15px_rgba(255,255,255,0.3)]">
+                Apocalypse
+            </h2>
+        </div>
+
+        <!-- Right Navigation Links -->
+        <nav class="hidden md:flex justify-end items-center gap-8 font-medium text-[1.1rem]">
+            <a href="#home" class="bg-white text-black px-7 py-2 rounded-full hover:scale-105 active:scale-95 transition-all duration-200 ease-out shadow-[0_0_15px_rgba(255,255,255,0.2)]">Home</a>
+            <a href="#about" class="text-white/80 hover:text-white hover:scale-105 active:scale-95 transition-all duration-200 ease-out">About</a>
+            <a href="#releases" class="text-white/80 hover:text-white hover:scale-105 active:scale-95 transition-all duration-200 ease-out">Releases</a>
+            <a href="#contact" class="text-white/80 hover:text-white hover:scale-105 active:scale-95 transition-all duration-200 ease-out">Contact</a>
+        </nav>
+
+        <!-- Mobile Menu Hamburger Icon -->
+        <button class="md:hidden text-white ml-auto">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+    </header>
+
+    <div id="home" class="w-full max-w-7xl flex flex-col mt-28 md:mt-16 z-10">
+        
+        <!-- Main Card Container with Tilt Effect -->
+        <div class="tilt-card bg-white/10 backdrop-blur-2xl border border-white/20 text-white rounded-[2rem] p-8 md:p-12 shadow-[0_8px_32px_0_rgba(255,255,255,0.05)] w-full flex flex-col gap-8 md:gap-12 anim-fade-in-up delay-100" style="animation: fadeInUp 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards, pulseGlow 4s infinite alternate;">
+            
+            <!-- Header Title (Moved Inside & Centered) -->
+            <h1 class="text-white text-4xl md:text-5xl leading-relaxed md:leading-relaxed tracking-normal text-center w-full">
+                Apocalypse Music
+            </h1>
+
+            <!-- Columns Wrapper -->
+            <div class="flex flex-col md:flex-row gap-10 md:gap-16 items-center md:items-start w-full">
+                
+                <!-- Left Column: Profile Info & Image -->
+                <div class="flex flex-col items-center w-full md:w-5/12 scroll-hidden delay-200 observer-target">
+                    <h2 class="text-xl font-medium tracking-tight mb-6 text-center text-gray-300">
+                        Artist · Creator · Composer
+                    </h2>
+                
+                <!-- Profile Image -->
+                <div class="relative group cursor-pointer mb-8" onclick="openModal('assets/logo.jpg')">
+                    <div class="absolute inset-0 bg-white/10 rounded-[3rem] opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-out transform scale-105 z-10"></div>
+                    <img 
+                        src="assets/logo.jpg" 
+                        alt="Apocalypse Music" 
+                        class="w-64 h-64 md:w-72 md:h-72 object-cover squircle shadow-lg transition-transform duration-200 ease-out group-hover:scale-[1.02] group-active:scale-[0.98] relative z-0"
+                        onerror="this.src='https://placehold.co/400x400/cccccc/000000?text=Image+Not+Found'"
+                    >
+                    
+                    <!-- Expand Icon Indicator -->
+                    <div class="absolute bottom-5 right-5 bg-black/50 backdrop-blur-md border border-white/20 text-white p-2.5 rounded-full opacity-70 group-hover:opacity-100 group-hover:scale-110 group-active:scale-95 transition-all duration-200 ease-out shadow-[0_4px_15px_rgba(0,0,0,0.5)] z-20 pointer-events-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Social Media Icons (Images instead of FontAwesome) -->
+                <div class="flex gap-5 justify-center w-full items-center">
+                    <a href="https://www.instagram.com/apocalypses.online/" target="_blank" class="floating-element" style="animation-delay: 0s;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="Instagram" class="w-10 h-10 hover:scale-110 active:scale-95 hover:-translate-y-1 transition-all duration-200 ease-out drop-shadow-md cursor-pointer">
+                    </a>
+                    <a href="https://www.tiktok.com/apocalypses.online" target="_blank" class="floating-element" style="animation-delay: 0.1s;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Tiktok_icon.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="TikTok" class="w-9 h-9 hover:scale-110 active:scale-95 hover:-translate-y-1 transition-all duration-200 ease-out drop-shadow-md cursor-pointer">
+                    </a>
+                    <a href="https://www.facebook.com/apocalypsemusicofficial/" target="_blank" class="floating-element" style="animation-delay: 0.2s;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="Facebook" class="w-10 h-10 hover:scale-110 active:scale-95 hover:-translate-y-1 transition-all duration-200 ease-out drop-shadow-md cursor-pointer">
+                    </a>
+                    <a href="https://www.youtube.com/@apocalypsemusic.official?si=npqKp8Xpu1Zy-miy" target="_blank" class="floating-element" style="animation-delay: 0.3s;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/YouTube_social_white_circle_%282017%29.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="YouTube" class="w-11 h-11 hover:scale-110 active:scale-95 hover:-translate-y-1 transition-all duration-200 ease-out drop-shadow-md cursor-pointer">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Column: Links & Contact Info -->
+            <div class="flex flex-col w-full md:w-7/12 justify-center pt-2">
+                
+                <!-- Link Buttons container -->
+                <div class="flex flex-col gap-5 w-full mb-8">
+                    
+                    <!-- Spotify Button -->
+                    <a href="https://open.spotify.com/artist/5TbYWQFR0CWW2xo5bPFjob" target="_blank" class="group relative flex items-center p-2 w-full border-2 border-white/40 rounded-full overflow-hidden transition-all duration-200 ease-out hover:scale-[1.02] active:scale-[0.98] hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] bg-transparent hover:bg-white hover:text-black hover:border-transparent scroll-hidden delay-200 observer-target text-white">
+                        <div class="w-12 h-12 flex items-center justify-center shrink-0">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Spotify_2.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="Spotify" class="w-9 h-9 group-hover:scale-110 transition-transform duration-200 ease-out">
+                        </div>
+                        <span class="flex-1 text-center text-[1.1rem] font-semibold tracking-tight pr-12">Spotify</span>
+                    </a>
+
+                    <!-- Snapchat Button -->
+                    <a href="https://www.snapchat.com/add/apocalypse.musc?share_id=NUWtfGLIa4M&locale=en-IN" target="_blank" class="group relative flex items-center p-2 w-full border-2 border-white/40 rounded-full overflow-hidden transition-all duration-200 ease-out hover:scale-[1.02] active:scale-[0.98] hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] bg-transparent hover:bg-white hover:text-black hover:border-transparent scroll-hidden delay-300 observer-target text-white">
+                        <div class="w-12 h-12 flex items-center justify-center shrink-0">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Snapchat-logo-svgrepo-com.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="Snapchat" class="w-9 h-9 group-hover:scale-110 transition-transform duration-200 ease-out">
+                        </div>
+                        <span class="flex-1 text-center text-[1.1rem] font-semibold tracking-tight pr-12">Snapchat</span>
+                    </a>
+
+                    <!-- WhatsApp Button -->
+                    <a href="https://wa.me/13436007061" target="_blank" class="group relative flex items-center p-2 w-full border-2 border-white/40 rounded-full overflow-hidden transition-all duration-200 ease-out hover:scale-[1.02] active:scale-[0.98] hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] bg-transparent hover:bg-white hover:text-black hover:border-transparent scroll-hidden delay-400 observer-target text-white">
+                        <div class="w-12 h-12 flex items-center justify-center shrink-0">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/2062095_application_chat_communication_logo_whatsapp_icon.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="WhatsApp" class="w-9 h-9 group-hover:scale-110 transition-transform duration-200 ease-out">
+                        </div>
+                        <span class="flex-1 text-center text-[1.1rem] font-semibold tracking-tight pr-12">WhatsApp</span>
+                    </a>
+
+                    <!-- Email Button -->
+                    <a href="mailto:official@apocalypses.online" class="group relative flex items-center p-2 w-full border-2 border-white/40 rounded-full overflow-hidden transition-all duration-200 ease-out hover:scale-[1.02] active:scale-[0.98] hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] bg-transparent hover:bg-white hover:text-black hover:border-transparent scroll-hidden delay-500 observer-target text-white">
+                        <div class="w-12 h-12 flex items-center justify-center shrink-0">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Gmail_icon_%282026%29.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="Email" class="w-8 h-8 group-hover:scale-110 transition-transform duration-200 ease-out">
+                        </div>
+                        <span class="flex-1 text-center text-[1.1rem] font-semibold tracking-tight pr-12">Email</span>
+                    </a>
+
+                </div>
+
+                <!-- Contact Information -->
+                <div class="text-center text-[1.05rem] font-medium tracking-tight leading-snug text-gray-300 scroll-hidden delay-500 observer-target">
+                    <p class="mb-1 hover:text-white transition-colors cursor-default">Email: official@apocalypses.online</p>
+                    <p class="hover:text-white transition-colors cursor-default">Phone: +1 (343) 600-7061</p>
+                </div>
+                
+            </div>
+            
+            </div> <!-- End Columns Wrapper -->
+        </div> <!-- End Main Card Container -->
+
+        <!-- About the Artist Container -->
+        <div id="about" class="bg-white/10 backdrop-blur-2xl border border-white/20 text-white rounded-[2rem] p-8 md:p-12 shadow-[0_8px_32px_0_rgba(255,255,255,0.05)] w-full flex flex-col md:flex-row items-center gap-8 md:gap-12 mt-8 scroll-hidden delay-300 observer-target hover:shadow-[0_0_20px_rgba(255,255,255,0.05)] transition-shadow duration-300 ease-out">
+            
+            <!-- Round Photo -->
+            <div class="shrink-0 relative group">
+                <div class="absolute inset-0 bg-white/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-out transform scale-105 z-[-1] blur-md"></div>
+                <img 
+                    src="assets/profile.jpg" 
+                    alt="Shivam Madaan" 
+                    class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-[0_8px_20px_rgba(0,0,0,0.4)] border-2 border-white/30 group-hover:scale-[1.03] transition-transform duration-200 ease-out relative z-10"
+                    onerror="this.src='https://placehold.co/400x400/cccccc/000000?text=Image+Not+Found'"
+                >
+            </div>
+
+            <!-- About Content -->
+            <div class="flex flex-col text-center md:text-left flex-1">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-5 drop-shadow-md">
+                    Who is Apocalypse Music?
+                </h2>
+                <p class="text-[1.05rem] md:text-[1.1rem] text-gray-200 leading-relaxed font-medium">
+                    Confident, ambitious, and passionate about fashion and creativity.
+                </p>
+                <p class="text-[1.05rem] md:text-[1.1rem] text-gray-300 leading-relaxed font-medium mt-4">
+                    A 25-year-old aspiring artist who loves expressing personality through music, photography, and runway presence.
+                </p>
+            </div>
+            
+        </div> <!-- End About Container -->
+
+        <!-- Releases Container -->
+        <div id="releases" class="bg-white/10 backdrop-blur-2xl border border-white/20 text-white rounded-[2rem] p-8 md:p-12 shadow-[0_8px_32px_0_rgba(255,255,255,0.05)] w-full flex flex-col items-center gap-8 mt-8 scroll-hidden delay-400 observer-target hover:shadow-[0_0_20px_rgba(255,255,255,0.05)] transition-shadow duration-300 ease-out">
+            
+            <!-- Section Title -->
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-center drop-shadow-md w-full">
+                Latest Releases
+            </h2>
+            
+            <!-- Spotify Embeds Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+                
+                <!-- Release 1 -->
+                <div class="w-full transition-transform duration-300 ease-out hover:scale-[1.02] drop-shadow-lg">
+                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5CdsCcXb1RmFf8kVPzMJsq?utm_source=generator&theme=0&si=107a0134ce4c443f" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                
+                <!-- Release 2 -->
+                <div class="w-full transition-transform duration-300 ease-out hover:scale-[1.02] drop-shadow-lg">
+                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2vlyIdMMRkeRmI9hRi45V9?utm_source=generator&theme=0&si=cc59970a693c4f24" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                
+            </div>
+            
+        </div> <!-- End Releases Container -->
+
+        <!-- Get in Touch Container -->
+        <div id="contact" class="w-full flex flex-col items-center mt-20 mb-8 scroll-hidden delay-500 observer-target">
+            
+            <!-- Section Header -->
+            <div class="text-center mb-10 w-full flex flex-col items-center gap-2">
+                <h2 class="text-4xl md:text-5xl font-bold text-white drop-shadow-lg tracking-wide">
+                    Get in Touch
+                </h2>
+                <p class="text-gray-400 text-sm md:text-base font-medium max-w-md mx-auto bg-black/40 px-4 py-1.5 rounded-full border border-white/5 backdrop-blur-sm">
+                    For collaborations, bookings, music enquiries, or professional communication.
+                </p>
+            </div>
+
+            <!-- Two Column Layout for Contact -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 w-full">
+                
+                <!-- Left Column: Quick Action Buttons -->
+                <div class="flex flex-col gap-4 justify-center">
+                    
+                    <!-- Email Button -->
+                    <a href="mailto:official@apocalypses.online" class="group flex items-center justify-center gap-3 w-full py-4 md:py-5 rounded-full bg-[#3874ff] hover:bg-[#2b5cda] text-white font-bold text-[1.15rem] transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-[0_8px_20px_rgba(56,116,255,0.3)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 group-hover:scale-110 transition-transform">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                        </svg>
+                        Email Us
+                    </a>
+
+                    <!-- Call Button -->
+                    <a href="tel:+13436007061" class="group flex items-center justify-center gap-3 w-full py-4 md:py-5 rounded-full bg-[#1a1e29] hover:bg-[#242938] border border-white/5 text-white font-bold text-[1.15rem] transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 group-hover:scale-110 transition-transform">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.48-4.18-7.076-7.076l1.293-.97c.362-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                        </svg>
+                        Call Us
+                    </a>
+
+                    <!-- WhatsApp Button -->
+                    <a href="https://wa.me/13436007061" target="_blank" class="group flex items-center justify-center gap-3 w-full py-4 md:py-5 rounded-full bg-[#25D366] hover:bg-[#1ebe5a] text-white font-bold text-[1.15rem] transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-[0_8px_20px_rgba(37,211,102,0.3)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6 group-hover:scale-110 transition-transform">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.662-2.062-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        WhatsApp
+                    </a>
+                </div>
+
+                <!-- Right Column: Contact Form -->
+                <div class="bg-[#14151a] border border-white/10 rounded-[2rem] p-8 shadow-2xl">
+                    
+                    <h3 class="text-2xl font-bold text-white mb-1">Send a Message</h3>
+                    <p class="text-gray-400 text-[0.9rem] mb-6 font-medium">Fill out the form below for music, booking, or collaboration enquiries.</p>
+                    
+                    <form action="thank-you.html" method="get" class="flex flex-col gap-4">
+                        
+                        <!-- Name Input -->
+                        <input type="text" placeholder="Your Name" required class="w-full bg-[#1e2028] border border-white/5 rounded-xl px-5 py-3.5 text-white placeholder-gray-500 font-medium focus:outline-none focus:border-white/20 focus:ring-1 focus:ring-white/20 transition-all">
+                        
+                        <!-- Email Input -->
+                        <input type="email" placeholder="Your Email" required class="w-full bg-[#1e2028] border border-white/5 rounded-xl px-5 py-3.5 text-white placeholder-gray-500 font-medium focus:outline-none focus:border-white/20 focus:ring-1 focus:ring-white/20 transition-all">
+                        
+                        <!-- Subject Input -->
+                        <input type="text" placeholder="Subject" class="w-full bg-[#1e2028] border border-white/5 rounded-xl px-5 py-3.5 text-white placeholder-gray-500 font-medium focus:outline-none focus:border-white/20 focus:ring-1 focus:ring-white/20 transition-all">
+                        
+                        <!-- Message Textarea -->
+                        <textarea placeholder="Your Message" rows="4" required class="w-full bg-[#1e2028] border border-white/5 rounded-xl px-5 py-3.5 text-white placeholder-gray-500 font-medium focus:outline-none focus:border-white/20 focus:ring-1 focus:ring-white/20 transition-all resize-none"></textarea>
+                        
+                        <!-- Submit Button -->
+                        <button type="submit" class="w-full bg-white text-black font-bold text-lg py-4 rounded-full mt-2 hover:bg-gray-200 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-lg">
+                            Submit Enquiry
+                        </button>
+                    </form>
+                </div>
+                
+            </div>
+            
+        </div> <!-- End Get in Touch Container -->
+
+    </div> <!-- End Max-w-7xl Container -->
+
+    <!-- Footer Section -->
+    <footer class="text-white text-center mt-12 text-sm font-medium tracking-wide leading-relaxed pb-6 anim-fade-in-up delay-500">
+        <p class="opacity-80 hover:opacity-100 transition-opacity cursor-default">© 2026 Apocalypse Music</p>
+        <p class="opacity-80 hover:opacity-100 transition-opacity cursor-default">All Rights Reserved.</p>
+    </footer>
+
+    <!-- Fullscreen Image Modal -->
+    <div id="image-modal" class="fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-md flex justify-center items-center opacity-0 transition-opacity duration-200 ease-out cursor-pointer">
+        <span class="absolute top-6 right-8 text-white text-4xl font-bold hover:text-gray-300 transition-colors">&times;</span>
+        <img id="modal-img" src="" alt="Fullscreen Preview" class="max-w-[90%] max-h-[90vh] object-contain rounded-2xl scale-95 transition-transform duration-200 ease-out">
+    </div>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            // 1. Intersection Observer for Scroll Effects
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('scroll-visible');
+                        entry.target.classList.remove('scroll-hidden');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const targets = document.querySelectorAll('.observer-target');
+            targets.forEach(target => observer.observe(target));
+
+            // 2. 3D Tilt Effect on the Main Card
+            const card = document.querySelector('.tilt-card');
+            
+            // Only apply tilt on desktop where mouse movement makes sense
+            if (window.matchMedia("(min-width: 768px)").matches) {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    
+                    // Calculate rotation (max 4 degrees to keep it subtle)
+                    const rotateX = ((y - centerY) / centerY) * -4; 
+                    const rotateY = ((x - centerX) / centerX) * 4;
+                    
+                    card.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.01, 1.01, 1.01)`;
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    // Smooth reset when mouse leaves
+                    card.style.transform = `perspective(1200px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+                });
+            }
+
+            // 3. Fullscreen Image Modal Logic
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-img');
+
+            window.openModal = function(src) {
+                modalImg.src = src;
+                modal.classList.remove('hidden');
+                // Trigger reflow for smooth transition
+                void modal.offsetWidth;
+                modal.classList.remove('opacity-0');
+                modalImg.classList.remove('scale-95');
+                modalImg.classList.add('scale-100');
+            };
+
+            modal.addEventListener('click', () => {
+                modal.classList.add('opacity-0');
+                modalImg.classList.remove('scale-100');
+                modalImg.classList.add('scale-95');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                }, 200); // Matches the faster CSS transition duration
+            });
+        });
+    </script>
+</body>
+</html>
